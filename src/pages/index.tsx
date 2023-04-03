@@ -1,11 +1,11 @@
-import { SignIn, SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
-import { type NextPage } from "next";
-import Head from "next/head";
+import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs'
+import { type NextPage } from 'next'
+import Head from 'next/head'
 
-import { api } from "~/utils/api";
+import { api } from '~/utils/api'
 
 const Home: NextPage = () => {
-  const { data } = api.posts.getAll.useQuery();
+  const { data } = api.posts.getAll.useQuery()
 
   const user = useUser()
 
@@ -22,13 +22,13 @@ const Home: NextPage = () => {
           {!!user.isSignedIn && <SignOutButton />}
         </div>
         <div>
-          {data?.map(post => (
+          {data?.map((post) => (
             <div key={post.id}>{post.content}</div>
           ))}
         </div>
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
