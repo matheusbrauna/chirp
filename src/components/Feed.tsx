@@ -11,7 +11,7 @@ export function Feed() {
 
   return (
     <div className="flex flex-col">
-      {[...data, ...data].map((props) => (
+      {data.map((props) => (
         <PostView key={props.post.id} {...props} />
       ))}
     </div>
