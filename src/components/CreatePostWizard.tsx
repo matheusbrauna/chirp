@@ -2,8 +2,8 @@ import { useUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import { useState } from 'react'
 import { toast } from 'react-hot-toast'
-import { api } from '~/utils/api'
 import { LoadingSpinner } from './Loading'
+import { api } from '~/utils/api'
 
 export function CreatePostWizard() {
   const { user } = useUser()

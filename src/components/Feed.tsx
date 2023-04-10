@@ -1,6 +1,6 @@
-import { api } from '~/utils/api'
 import { PostView } from './PostView'
 import { LoadingPage } from './Loading'
+import { api } from '~/utils/api'
 
 export function Feed() {
   const { data, isLoading: postLoading } = api.posts.getAll.useQuery()
